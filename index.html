@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Landing Page</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+
+    <!-- icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+     <!---Preloader--->
+     <div id="loading"></div>
+    <!-- header design -->
+    <header class="header">
+      <a class="logo" href="#">Portfolio</a>
+
+      <div class="switcher">
+        <button
+        aria-label="Theme color switcher button1"
+          class="theme-buttons"
+          data-color="#00adef"
+          style="background: #00adef"
+        ></button>
+        <button
+        aria-label="Theme color switcher button2"
+          class="theme-buttons"
+          data-color="#0ef"
+          style="background: #0ef"
+        ></button>
+        <button
+        aria-label="Theme color switcher button3"
+          class="theme-buttons"
+          data-color="#f54266"
+          style="background: #f54266"
+        ></button>
+        <button
+        aria-label="Theme color switcher button4"
+          class="theme-buttons"
+          data-color="#730eeb"
+          style="background: #730eeb"
+        ></button>
+      </div>
+
+      <i class="bx bx-menu" id="menu-icon"></i>
+      <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="mode-switcher">
+        <svg
+          id="sun"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0,0,256,256"
+          width="50px"
+          height="50px"
+          fill-rule="nonzero"
+        >
+          <g
+            fill="#ffffff"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <g transform="scale(5.12,5.12)">
+              <path
+                d="M24.90625,3.96875c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v6c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-6c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953zM10.65625,9.84375c-0.375,0.06641 -0.67578,0.33984 -0.78125,0.70313c-0.10547,0.36719 0.00391,0.75781 0.28125,1.01563l4.25,4.25c0.24219,0.29688 0.62891,0.43359 1.00391,0.34766c0.37109,-0.08594 0.66406,-0.37891 0.75,-0.75c0.08594,-0.375 -0.05078,-0.76172 -0.34766,-1.00391l-4.25,-4.25c-0.20703,-0.22266 -0.50781,-0.33594 -0.8125,-0.3125c-0.03125,0 -0.0625,0 -0.09375,0zM39.03125,9.84375c-0.22656,0.03125 -0.4375,0.14453 -0.59375,0.3125l-4.25,4.25c-0.29687,0.24219 -0.43359,0.62891 -0.34766,1.00391c0.08594,0.37109 0.37891,0.66406 0.75,0.75c0.375,0.08594 0.76172,-0.05078 1.00391,-0.34766l4.25,-4.25c0.3125,-0.29687 0.40234,-0.76172 0.21875,-1.15234c-0.1875,-0.39453 -0.60156,-0.62109 -1.03125,-0.56641zM25,15c-5.51562,0 -10,4.48438 -10,10c0,5.51563 4.48438,10 10,10c5.51563,0 10,-4.48437 10,-10c0,-5.51562 -4.48437,-10 -10,-10zM4.71875,24c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h6c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-6c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM38.71875,24c-0.55078,0.07813 -0.9375,0.58984 -0.85937,1.14063c0.07813,0.55078 0.58984,0.9375 1.14063,0.85938h6c0.35938,0.00391 0.69531,-0.18359 0.87891,-0.49609c0.17969,-0.3125 0.17969,-0.69531 0,-1.00781c-0.18359,-0.3125 -0.51953,-0.5 -0.87891,-0.49609h-6c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM15,33.875c-0.22656,0.03125 -0.4375,0.14453 -0.59375,0.3125l-4.25,4.25c-0.29687,0.24219 -0.43359,0.62891 -0.34766,1.00391c0.08594,0.37109 0.37891,0.66406 0.75,0.75c0.375,0.08594 0.76172,-0.05078 1.00391,-0.34766l4.25,-4.25c0.29688,-0.28516 0.38672,-0.72656 0.22656,-1.10547c-0.15625,-0.37891 -0.53516,-0.62109 -0.94531,-0.61328c-0.03125,0 -0.0625,0 -0.09375,0zM34.6875,33.875c-0.375,0.06641 -0.67578,0.33984 -0.78125,0.70313c-0.10547,0.36719 0.00391,0.75781 0.28125,1.01563l4.25,4.25c0.24219,0.29688 0.62891,0.43359 1.00391,0.34766c0.37109,-0.08594 0.66406,-0.37891 0.75,-0.75c0.08594,-0.375 -0.05078,-0.76172 -0.34766,-1.00391l-4.25,-4.25c-0.1875,-0.19922 -0.44531,-0.30859 -0.71875,-0.3125c-0.03125,0 -0.0625,0 -0.09375,0c-0.03125,0 -0.0625,0 -0.09375,0zM24.90625,37.96875c-0.04297,0.00781 -0.08594,0.01953 -0.125,0.03125c-0.46484,0.10547 -0.79297,0.52344 -0.78125,1v6c-0.00391,0.35938 0.18359,0.69531 0.49609,0.87891c0.3125,0.17969 0.69531,0.17969 1.00781,0c0.3125,-0.18359 0.5,-0.51953 0.49609,-0.87891v-6c0.01172,-0.28906 -0.10547,-0.56641 -0.3125,-0.76172c-0.21094,-0.19922 -0.49609,-0.29687 -0.78125,-0.26953z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+        <input type="checkbox" id="mode" role="button" aria-label="dark and light mode switch button" />
+        <svg
+          id="moon"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          version="1.1"
+          width="256"
+          height="256"
+          viewBox="0 0 256 256"
+          xml:space="preserve"
+        >
+          <defs></defs>
+          <g
+            style="
+              stroke: none;
+              stroke-width: 0;
+              stroke-dasharray: none;
+              stroke-linecap: butt;
+              stroke-linejoin: miter;
+              stroke-miterlimit: 10;
+              fill: none;
+              fill-rule: nonzero;
+              opacity: 1;
+            "
+            transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+          >
+            <path
+              d="M 87.823 60.7 c -0.463 -0.423 -1.142 -0.506 -1.695 -0.214 c -15.834 8.398 -35.266 2.812 -44.232 -12.718 c -8.966 -15.53 -4.09 -35.149 11.101 -44.665 c 0.531 -0.332 0.796 -0.963 0.661 -1.574 c -0.134 -0.612 -0.638 -1.074 -1.259 -1.153 c -9.843 -1.265 -19.59 0.692 -28.193 5.66 C 13.8 12.041 6.356 21.743 3.246 33.35 S 1.732 57.08 7.741 67.487 c 6.008 10.407 15.709 17.851 27.316 20.961 C 38.933 89.486 42.866 90 46.774 90 c 7.795 0 15.489 -2.044 22.42 -6.046 c 8.601 -4.966 15.171 -12.43 18.997 -21.586 C 88.433 61.79 88.285 61.123 87.823 60.7 z"
+              style="
+                stroke: none;
+                stroke-width: 1;
+                stroke-dasharray: none;
+                stroke-linecap: butt;
+                stroke-linejoin: miter;
+                stroke-miterlimit: 10;
+                fill: rgb(255, 255, 255);
+                fill-rule: nonzero;
+                opacity: 1;
+              "
+              transform=" matrix(1 0 0 1 0 0) "
+              stroke-linecap="round"
+            />
+          </g>
+        </svg>
+      </button>
+    </header>
+    <div class="main">
+      <div class="follow-cursor"></div>
+      <!-- home section design -->
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Hello, it's me</h3>
+          <h1>S M Maaz</h1>
+          <h3>And I'm a <span class="multiple-text"></span></h3>
+          <p>
+            An Enthusiast Web Developer looking for work in all types of
+            Websites. I have previous experience in LMS, gaming and E-store
+            Websites.
+          </p>
+          <div class="social-media">
+            <a href="#" aria-label="Go to my Facebook profile"><i class="bx bxl-facebook"></i></a>
+            <a href="https://www.linkedin.com/in/syed-muhammad-maaz-b549889b"
+            aria-label="Go to my Linkedin profile"><i class="bx bxl-linkedin"></i
+            ></a>
+            <a href="https://github.com/Master786-wd"
+            aria-label="Go to my Github profile"><i class="bx bxl-github"></i
+            ></a>
+          </div>
+          <div class="home-btn">
+            <a
+              aria-label="Download my Resume"
+              role="button"
+              href="https://github.com/Master786-wd/My-CV"
+              class="btn"
+              >Download CV</a
+            >
+            <a role="button" href="#" class="btn ico" aria-label="Let's Hire me!">Get Started</a>
+          </div>
+        </div>
+        <div class="home-img">
+          <img src="images/profile-pics/Blue-1.png" alt="Profile Picture" id="pic-1" />
+        </div>
+      </section>
+      <!-- about section design -->
+      <section class="about" id="about">
+        <div class="about-img">
+          <img src="images\profile-pics\Blue-2.png" alt="Profile Picture" id="pic-2" />
+        </div>
+        <div class="about-content">
+          <h2 class="heading">About <span>Me</span></h2>
+          <h3>Full Stack Developer!</h3>
+          <p id="visible">
+            I have completed my Diploma in Website Engineering. I got an A Grade
+            in 1st semester for UI design. I got an A1 Grade in 2nd semester for
+            Front-end development. I passed 3rd semester with an A Grade in
+            Back-end development. After passing out, I did a 4-month internship
+            in a well-known organization. I worked in Front-end and CMS website
+            development during my Internship.<br />I did product listing, Theme
+            customization, and Convert Prototypes and wireframes into dynamic
+            and interactive web pages from scratch. PSD, XD, Figma to HTML,
+            WordPress, and Shopify. I did theme creation from scratch through
+            all types of page builders. I also have experience in PHP CRUD
+            Application and React JS Todos App. <br /><br />
+            <span>Skills</span><br /><br />
+            <img src="images/skills//html-5.png" alt="HTML-5" />
+            <img src="images/skills/css-3.png" alt="CSS-3" />
+            <img src="images/skills//bootstrap.png" alt="Bootstrap" />
+            <img src="images/skills//tailwind-css.png" alt="Tailwind CSS" />
+            <img src="images/skills//sass.png" alt="SASS" />
+            <img src="images/skills//js.png" alt="javascript" />
+            <img src="images/skills//jquery.png" alt="jQuery" />
+            <img src="images/skills//angular.png" alt="Angular JS" />
+            <img src="images/skills//react.png" alt="React JS" />
+            <img src="images/skills//php.png" alt="PHP" />
+            <img src="images/skills//mysql.png" alt="MySQL" />
+            <img src="images/skills//laravel.png" alt="Laravel" />
+            <img src="images/skills//wordpress.png" alt="WordPress" />
+            <img src="images/skills//shopify.png" alt="Shopify" />
+          </p>
+          <input type="checkbox" id="click" class="btn" role="button" aria-label="button" />
+        </div>
+      </section>
+      <!-- services section design -->
+      <section class="services" id="services">
+        <h2 class="heading">Our <span>Services</span></h2>
+        <div class="services-container">
+          <div class="services-box">
+            <i class="bx bx-code-block"></i>
+            <h3>Front-end</h3>
+            <p>
+              PSD, XD, Figma to HTML. Theme Customization and Theme Creation
+              from Scratch. Convert wireframes and Prototypes into interactive
+              and dynamic website pages.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+          <div class="services-box">
+            <i class="bx bxl-wordpress"></i>
+            <h3>CMS</h3>
+            <p>
+              PSD, XD, Figma to WordPress. Theme Customization of Shopify,
+              WordPress, and Theme Creation from Scratch through page builders.
+              Convert wireframes into interactive web pages.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+          <div class="services-box">
+            <i class="bx bxs-server"></i>
+            <h3>Back-end</h3>
+            <p>
+              PHP CRUD Application, Creation and Setup of Dashboard, API
+              integration, Dependent forms or dropdowns, and Integration of
+              different types of payment gateways.
+            </p>
+            <a href="#" class="btn">Read More</a>
+          </div>
+        </div>
+      </section>
+      <!-- portfolio section design -->
+      <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="filter">
+          <i class="bx bx-filter filter-icon"></i>
+          <div class="tabs">
+            <ul>
+              <li class="list act" data-filter="all">All</li>
+              <li class="list" data-filter="html">PSD to HTML</li>
+              <li class="list" data-filter="word">PSD to WordPress</li>
+              <li class="list" data-filter="replica">Replica Websites</li>
+              <li class="list" data-filter="shop">Shopify</li>
+            </ul>
+          </div>
+        </div>
+        <div class="portfolio-container">
+          <div class="filtr-item project-wrapper html">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img carepoint">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Carepoint-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>CarePoint Website (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Carepoint-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/HTML-Carepoint-Website-Project"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/HTML_Carepoint_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper html">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img applab">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Applab-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Applab Website (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Applab-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/HTML-Applab-Website-Project"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/HTML_Applab_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper html">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img moderno">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/moderno-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Moderno Website (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/moderno-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/HTML-Moderno-Website-Project"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/HTML_Moderno_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper replica">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img rently">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Rently-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Rently Website (Replica)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Rently-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/HTML-Rently-Replica-Website-Project"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/HTML_Rently_Replica"
+                class="plogo"
+                >PNG</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper shop">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img shop1">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Pantano1-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Shopify E-store (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Pantano1-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/Shopify-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/Shopify_Pantano-store_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper shop">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img shop2">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Pantano2-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Shopify E-store (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Pantano2-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/Shopify-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/Shopify_Pantano-store_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper shop">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img shop3">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Pantano3-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Shopify E-store (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Pantano3-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/Shopify-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/Shopify_Pantano-store_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper shop">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img shop4">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Pantano4-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Shopify E-store (PSD to HTML)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Pantano4-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/Shopify-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/Shopify_Pantano-store_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img coffee">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Coffeecup-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Coffeecup Website (PSD to WordPress)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Coffeecup-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-CoffeeCup-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/WordPress_Coffeecup_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img doob1">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Doob1-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Doob Website (PSD to WordPress)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Doob1-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-Doob-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/WordPress_Doob_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img doob2">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Doob2-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Doob Website (PSD to WordPress)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Doob2-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-Doob-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+              <a
+                href="https://github.com/Master786-wd/PSD-Web-Templates/tree/WordPress_Doob_PSD"
+                class="plogo"
+                >Ps</a
+              >
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img ltg1">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/LTG1-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Learn To Grow Website (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/LTG1-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-Learn-To-Grow-Online-Courses-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img ltg2">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/LTG2-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Learn To Grow Website (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/LTG2-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-Learn-To-Grow-Online-Courses-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img ltg3">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/LTG3-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Learn To Grow Website (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/LTG3-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-Learn-To-Grow-Online-Courses-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img smart1">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Smartwear1-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Smartwear E-store (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Smartwear1-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img smart2">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Smartwear2-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Smartwear E-store (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Smartwear2-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img smart3">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Smartwear3-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Smartwear E-store (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Smartwear3-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="filtr-item project-wrapper word">
+            <div class="project-item-inner">
+              <div class="dot-style"><i></i><i></i><i></i></div>
+              <!--<span class="page-name">Home 1</span>-->
+              <div class="project-img-wrapper">
+                <div class="project-img smart4">
+                  <img
+                    decoding="async"
+                    src="images/web-pics/Smartwear4-img.png"
+                    alt="Website Home-Page"
+                  />
+                </div>
+              </div>
+              <div class="project-text headline">
+                <h3>Smartwear E-store (No PSD)</h3>
+                <span></span>
+              </div>
+              <div class="zoom-icon">
+                <a
+                  aria-label="Zoom image button"
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="images/web-pics/Smartwear4-img.png"
+                  ><i class="bx bx-zoom-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="botm">
+              <div class="view btn">
+                <a
+                  target="_blank"
+                  class="d-flex justify-content-center align-items-center"
+                  href="https://github.com/Master786-wd/Personal-Portfolio/tree/WordPress-E-Store-Website"
+                  >View Code <i class="bx bx-code-alt"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- contact section design -->
+      <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form method="POST" action="mailer.php">
+          <div class="input-box">
+            <label for="name" class="hide-element">Your Full Name</label>
+            <input
+              type="text"
+              placeholder="Full Name"
+              name="name"
+              required="required"
+            />
+            <label for="email" class="hide-element">Your Email Address</label>
+            <input
+              type="email"
+              placeholder="Email Address"
+              name="email"
+              required="required"
+            />
+          </div>
+          <div class="input-box">
+            <label for="number" class="hide-element"
+              >Your Mobile Number(optional)</label
+            >
+            <input
+              type="number"
+              placeholder="Mobile Number(optional)"
+              name="phone"
+            />
+            <label for="subject" class="hide-element">Your Subject</label>
+            <input type="text" placeholder="Subject" name="subject" />
+          </div>
+          <label for="message" class="hide-element">Your Message</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required="required"
+          ></textarea>
+          <input type="submit" value="Send Message" class="btn" name="go" role="button" aria-label="button"/>
+        </form>
+      </section>
+    </div>
+    <!-- footer design -->
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2023 by S M Maaz | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#home" role="button" aria-label="go to Top"><i class="bx bx-up-arrow-alt"></i></a>
+      </div>
+    </footer>
+    <!-- jQuery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.0.js"
+      integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM="
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".list").click(function () {
+          const value = $(this).attr("data-filter");
+          if (value == "all") {
+            $(".filtr-item").show("2500");
+          } else {
+            $(".filtr-item")
+              .not("." + value)
+              .hide();
+            $(".filtr-item")
+              .filter("." + value)
+              .show("2500");
+          }
+        });
+        $(".list").click(function () {
+          $(this).addClass("act").siblings().removeClass("act");
+        });
+      });
+    </script>
+
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <!-- custom js -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
