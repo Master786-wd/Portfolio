@@ -1,6 +1,6 @@
 /*==================== Preloader JS ====================*/
 $(document).ready(function (e) {
-  setTimeout(function () { $('#loading').hide(); }, 100);
+  setTimeout(function () { $('#loading').hide(); }, 1500);
 });
 /*==================== toggle icon navbar ====================*/
 let menuIcon = document.querySelector("#menu-icon");
