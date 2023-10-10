@@ -219,6 +219,9 @@ section{
 
 .mode-switcher input[type="checkbox"]{
     appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
 }
 
 .mode-switcher input[type="checkbox"]::before{
