@@ -1075,7 +1075,11 @@ span{
     .services{
         padding-bottom: 7rem;
     }
-    
+
+    .services-container .services-box{
+      flex:auto;
+    }
+  
     .portfolio{
         padding-bottom:7rem;
     }
