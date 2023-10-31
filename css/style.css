@@ -58,7 +58,7 @@ body.light-mode .project-text h3{
 }
 
 section{
-    min-height: 100vh;
+    min-height: 100%;
     padding: 10rem 9% 2rem;
 }
 
