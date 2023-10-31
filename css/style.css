@@ -1077,7 +1077,7 @@ span{
     }
 
     .services-container .services-box{
-      flex:auto;
+      flex:1 1 35rem;
     }
   
     .portfolio{
